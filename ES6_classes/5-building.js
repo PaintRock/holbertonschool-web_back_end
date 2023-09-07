@@ -1,4 +1,4 @@
-class Building {
+expoert default class Building {
   constructor(sqft) {
     this._sqft = sqft;
   }
@@ -29,18 +29,3 @@ class OfficeBuilding extends Building {
 
 const officeBuilding = new OfficeBuilding(5000, 10);
 console.log(officeBuilding.evacuationWarningMessage()); // Output: Evacuate the office building with 10 offices!
-
-// Example of a class that does not override the abstract method
-class ResidentialBuilding extends Building {
-  constructor(sqft, numberOfRooms) {
-    super(sqft);
-    this._numberOfRooms = numberOfRooms;
-  }
-}
-
-try {
-  const residentialBuilding = new ResidentialBuilding(3000, 5);
-  residentialBuilding.evacuationWarningMessage(); // This should throw an error
-} catch (error) {
-  console.error(error.message); // Output: Class extending Building must override evacuationWarningMessage
-}
