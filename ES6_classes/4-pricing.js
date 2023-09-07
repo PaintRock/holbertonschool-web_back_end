@@ -48,5 +48,5 @@ const price = new Pricing(50, dollar);
 
 console.log(price.displayFullPrice()); // Output: 50 Dollars ($)
 
-const convertedAmount = Pricing.convertPrice(50, 0.85); // Convert 50 Dollars 
+const convertedAmount = Pricing.convertPrice(50, 0.85); // Convert 50 Dollars
 console.log(`Converted Amount: ${convertedAmount}`); // Output: Converted Amount: 42.5
