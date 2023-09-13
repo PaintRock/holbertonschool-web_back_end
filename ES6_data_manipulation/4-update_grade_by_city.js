@@ -22,7 +22,7 @@ export default function updateStudentGradeByCity(students, city, newGrades) {
 
 const newGrades = [
   { studentId: 1, grade: 'A+' },
-  { studentId: 5, grade: 'B' }
+  { studentId: 5, grade: 'B' },
 ];
 
 const city = 'San Francisco';
