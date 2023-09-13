@@ -1,3 +1,5 @@
+import { students } from "./students";
+
 export default function updateStudentGradeByCity(students, city, newGrades) {
   // Filter students in the specified city
   const studentsInCity = students.filter((student) => student.location === city);
@@ -17,13 +19,6 @@ export default function updateStudentGradeByCity(students, city, newGrades) {
 
   return updatedStudents;
 }
-
-// Example usage:
-const students = [
-  { id: 1, firstName: 'Guillaume', location: 'San Francisco', grade: 'A' },
-  { id: 2, firstName: 'James', location: 'Columbia', grade: 'B' },
-  { id: 5, firstName: 'Serena', location: 'San Francisco', grade: 'C' },
-];
 
 const newGrades = [
   { studentId: 1, grade: 'A+' },
