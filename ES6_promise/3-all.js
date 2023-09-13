@@ -6,7 +6,7 @@ const userPromise = createUser();
 
   Promise.all([photoPromise, userPromise])
   .then((results) => {
-    const [photoResponse, userResponse] = results;
+    const [userResponse] = results;
     console.log(`body ${userResponse.firstName} ${userResponse.lastName}`);
   })
   .catch(() => {
