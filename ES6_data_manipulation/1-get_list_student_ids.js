@@ -5,7 +5,7 @@ export default function getListStudentIds(studentArray) {
   }
 
   // Use the map function to extract ids
-  const studentIds = studentArray.map(student => student.id);
+  const studentIds = studentArray.map((student) => student.id);
 
   return studentIds;
 }
