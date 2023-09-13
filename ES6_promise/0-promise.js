@@ -1,4 +1,4 @@
-function getResponseFromAPI() {
+export default function getResponseFromAPI() {
   return new Promise((resolve, reject) => {
     // Perform your asynchronous operations here
     // For example, you can make an HTTP request using fetch:
