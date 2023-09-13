@@ -13,6 +13,3 @@ export default function handleProfileSignup() {
       console.log('Signup system offline');
     });
 }
-
-// Call handleProfileSignup to start the process
-handleProfileSignup();
