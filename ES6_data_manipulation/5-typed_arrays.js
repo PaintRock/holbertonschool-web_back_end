@@ -5,13 +5,13 @@ export default function updateStudentGradeByCity(students, city, newGrades) {
   // Map students to update their grades
   const updatedStudents = studentsInCity.map(student => {
     // Find the corresponding grade in newGrades, or set it to N/A if not found
-    const gradeObject = newGrades.find(grade => grade.studentId === student.id);
+    const gradeObject = newGrades.find((grade) => grade.studentId === student.id);
     const grade = gradeObject ? gradeObject.grade : 'N/A';
 
     // Create a new student object with the updated grade
     return {
       ...student,
-      grade
+      grade,
     };
   });
 
