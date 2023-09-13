@@ -20,6 +20,11 @@ export default function updateStudentGradeByCity(students, city, newGrades) {
   return updatedStudents;
 }
 
+const newGrades = [
+  { studentId: 1, grade: 'A+' },
+  { studentId: 5, grade: 'B' }
+];
+
 const city = 'San Francisco';
 const updatedStudents = updateStudentGradeByCity(students, city, newGrades);
 console.log(updatedStudents);
