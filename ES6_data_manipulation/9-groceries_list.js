@@ -1,4 +1,4 @@
-export default function groceriesList():{
+export default function groceriesList() {
     const grocery_items = [
         ["Apples", 10,]
         ["Tomatoes", 10,]
