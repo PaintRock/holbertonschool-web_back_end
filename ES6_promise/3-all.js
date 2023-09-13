@@ -9,7 +9,7 @@ const userPromise = createUser();
     const [photoResponse, userResponse] = results;
     console.log(`body ${userResponse.firstName} ${userResponse.lastName}`);
   })
-  .catch((error) => {
+  .catch(() => {
     console.log('Signup system offline');
   });
 }
