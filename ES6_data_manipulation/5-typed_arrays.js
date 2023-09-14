@@ -1,7 +1,7 @@
 export default function createInt8TypedArray(length, position, value) {
   // Check if the position is within the valid range
   if (position < 0 || position >= length) {
-    throw new Error("Position outside range");
+    throw new Error('Position outside range');
   }
 
   // Create a new ArrayBuffer of the specified length
@@ -30,5 +30,5 @@ try {
 
   console.log(storedValue); // Output will be 42
 } catch (error) {
-  console.error(error.message); // Handle the "Position outside range" error if the position is invalid
+  console.error(error.message); 
 }
