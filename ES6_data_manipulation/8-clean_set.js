@@ -11,12 +11,5 @@ export default function cleanSet(set, startString) {
   });
 
   // Join the result array elements with hyphens to create the final string
-  return result.join("-");
+  return result.join('-');
 }
-
-// Example usage:
-const mySet = new Set(["apple", "banana", "cherry", "dog", "cat"]);
-const startString = "c";
-
-const result = cleanSet(mySet, startString);
-console.log(result); // Output will be "herry"
