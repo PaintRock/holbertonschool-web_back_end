@@ -1,35 +1,34 @@
-export default function updateStudentGradeByCity(students, city, newGrades) {
-  // Filter students in the specified city
-  const studentsInCity = students.filter((student) => student.location === city);
+export default function createInt8TypedArray(length, position, value) {
+  // Check if the position is within the valid range
+  if (position < 0 || position >= length) {
+    throw new Error("Position outside range");
+  }
 
-  // Map students to update their grades
-  const updatedStudents = studentsInCity.map((student) => {
-    // Find the corresponding grade in newGrades, or set it to N/A if not found
-    const gradeObject = newGrades.find((grade) => grade.studentId === student.id);
-    const grade = gradeObject ? gradeObject.grade : 'N/A';
+  // Create a new ArrayBuffer of the specified length
+  const buffer = new ArrayBuffer(length);
 
-    // Create a new student object with the updated grade
-    return {
-      ...student,
-      grade,
-    };
-  });
+  // Create a DataView to work with the ArrayBuffer
+  const view = new DataView(buffer);
 
-  return updatedStudents;
+  // Set the Int8 value at the specified position
+  view.setInt8(position, value);
+
+  return buffer;
 }
 
 // Example usage:
-const students = [
-  { id: 1, firstName: 'Guillaume', location: 'San Francisco', grade: 'A' },
-  { id: 2, firstName: 'James', location: 'Columbia', grade: 'B' },
-  { id: 5, firstName: 'Serena', location: 'San Francisco', grade: 'C' }
-];
+try {
+  const length = 5;
+  const position = 2;
+  const value = 42;
 
-const newGrades = [
-  { studentId: 1, grade: 'A+' },
-  { studentId: 5, grade: 'B' },
-];
+  const result = createInt8TypedArray(length, position, value);
 
-const city = 'San Francisco';
-const updatedStudents = updateStudentGradeByCity(students, city, newGrades);
-console.log(updatedStudents);
+  // Convert the result ArrayBuffer back to DataView to access the stored value
+  const resultView = new DataView(result);
+  const storedValue = resultView.getInt8(position);
+
+  console.log(storedValue); // Output will be 42
+} catch (error) {
+  console.error(error.message); // Handle the "Position outside range" error if the position is invalid
+}
