@@ -19,4 +19,3 @@ const myArray = [2, 3, 4];
 
 const result = hasValuesFromArray(mySet, myArray);
 console.log(result); // Output will be true because all elements in myArray exist in mySet.
-
