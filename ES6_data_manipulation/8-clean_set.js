@@ -1,5 +1,5 @@
 export default function cleanSet(set, startString) {
-  let result = [];
+  const result = [];
 
   // Iterate over the set elements
   set.forEach((value) => {
