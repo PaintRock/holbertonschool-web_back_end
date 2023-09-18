@@ -10,5 +10,3 @@ export default function createInt8TypedArray(length, position, value) {
 
   return new DataView(buffer);
 }
-
-export default createInt8TypedArray;
